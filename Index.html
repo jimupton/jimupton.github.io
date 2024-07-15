@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taniti Island Tourism</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Taniti</h1>
+        <input type="text" placeholder="Search for restaurants, hotels, attractions..." id="searchBar" oninput="search()">
+    </header>
+    <main>
+        <!-- <div class="image-container"> 
+            <img class="featured-image" src="Beach.jpg"  alt="Beach">
+            <img class="featured-image" src="Rainforest.jpg"  alt="Rainforest">
+            <img class="featured-image" src="Volcano.jpg" alt="Volcano">
+         </div> -->
+         <div class="image-container">
+            <div class="image-item">
+                <img src="Beach.jpg" alt="Image 1">
+                <div class="citation">(Beach, 2017)</div>
+            </div>
+            <div class="image-item">
+                <img src="Rainforest.jpg" alt="Image 2">
+                <div class="citation">(Rainforest, 2019)</div>
+            </div>
+            <div class="image-item">
+                <img src="Volcano.jpg" alt="Image 3">
+                <div class="citation">(Volcano, 2021)</div>
+            </div>
+        </div>
+        <section id="home" class="section active">
+            
+            <div id="quick-links">
+                <div class="link" onclick="navigate('restaurants')">Restaurants</div>
+                <div class="link" onclick="navigate('lodging')">Lodging</div>
+                <div class="link" onclick="navigate('entertainment')">Entertainment</div>
+                <div class="link" onclick="navigate('sightseeing')">Sightseeing</div>
+                <div class="link" onclick="navigate('transportation')">Transportation</div>
+            </div>
+        </section>
+        <section id="restaurants" class="section">
+            <h2>Restaurants in Taniti</h2>
+            <section id="filters">
+                <button onclick="filterCuisine('local')">Local Cuisine</button>
+                <button onclick="filterCuisine('american')">American-Style</button>
+                <button onclick="filterCuisine('pan-asian')">Pan-Asian</button>
+            </section> 
+            <section id="restaurant-list">
+                <!-- Restaurant listings will be dynamically inserted here -->
+            </section>
+        <!-- </section>
+            </div> -->
+            <button onclick="navigate('home')">Back to Home</button>
+        </section>
+        <section id="lodging" class="section">
+                <h2>Lodgings in Taniti. Find Your Stay</h2>
+                <section id="lodging-filters">
+                    <button onclick="filterLodging('hotel')">Hotels</button>
+                    <button onclick="filterLodging('hostel')">Hostels</button>
+                    <button onclick="filterLodging('resort')">Resorts</button>
+                    <button onclick="filterLodging('bnb')">B&Bs</button>
+                </section>
+                <section id="lodging-list">
+                    <!-- Lodging listings will be dynamically inserted here -->
+                </section>
+                <button onclick="navigate('home')">Back to Home</button>
+        </section>
+        <section id="entertainment" class="section">
+            <h2>Entertainment in Taniti</h2>
+            <section id="entertainment-filters">
+                <button onclick="filterEntertainment('beach')">Beach Activities</button>
+                <button onclick="filterEntertainment('nightlife')">Nightlife</button>
+                <button onclick="filterEntertainment('rainforest')">Rainforest Exploration</button>
+            </section>
+            <section id="entertainment-list">
+                <!-- Entertainment listings will be dynamically inserted here -->
+            </section>
+            <button onclick="navigate('home')">Back to Home</button>
+        </section>
+                </section>
+        <section id="sightseeing" class="section">
+            <h2>Sightseeing Tours</h2>
+            <section id="sightseeing-filters">
+                <button onclick="filterSightseeing('beach')">Beach Tours</button>
+                <button onclick="filterSightseeing('volcano')">Volcano Tours</button>
+                <button onclick="filterSightseeing('rainforest')">Rainforest Tours</button>
+            </section>
+            <section id="sightseeing-list">
+                <!-- Sightseeing listings will be dynamically inserted here -->
+            </section>
+            <button onclick="navigate('home')">Back to Home</button>
+        </section>
+        <section id="transportation" class="section">
+            <h2>Getting Around</h2>
+            <section id="transportation-filters">
+                <button onclick="filterTransportation('bus')">Public Buses</button>
+                <button onclick="filterTransportation('taxi')">Taxis</button>
+                <button onclick="filterTransportation('rental')">Rental Cars</button>
+                <button onclick="filterTransportation('bike')">Bike Rentals</button>
+            </section>
+                <section id="transportation-list">
+                    <!-- Transportation listings will be dynamically inserted here -->
+                </section>
+                <button onclick="navigate('home')">Back to Home</button>
+        </section>
+        <section id="info" class="section">
+            <h2>General Information</h2>
+            <section id="info-filters">
+                <button onclick="filterInfo('Climate')">Climate</button>
+                <button onclick="filterInfo('Currency')">Currency</button>
+                <button onclick="filterInfo('Language')">Langauge</button>
+                <button onclick="filterInfo('Time Zone')">Time Zone</button>
+                <button onclick="filterInfo('Drinking')">Drinking</button>
+                <button onclick="filterInfo('Outlets')">Power</button>
+            </section>
+            <section id="info-list">
+                <!-- General Information listings will be dynamically inserted here -->
+            </section>
+            <button onclick="navigate('home')">Back to Home</button>
+
+    </main>
+    <footer>
+        <nav>
+            <div class="nav-item" onclick="navigate('home')">Home</div>
+            <div class="nav-item" onclick="navigate('info')">General Information
+            </div>
+        </nav>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
